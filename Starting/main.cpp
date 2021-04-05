@@ -13,7 +13,7 @@ using namespace mssm;
 
 void graphicsMain(Graphics& g)
 {
-
+while(true){
     while(g.draw()){
         g.text(g.width()/2,g.height()-100,100,"Please go die",WHITE);
         if(g.isKeyPressed(' ')){
@@ -78,7 +78,11 @@ break;
       g.ellipseC(RandFruit,30,30,RED,RED);
       SnakePos=SnakePos+SnakeVel;
     }
-
+    g.text(g.width()/2,g.height()-100,100,"Press A",BLUE);
+    if(g.isKeyPressed('a')){
+        break;
+    }
+}
 }
 int main(int /*argc*/, char** /*argv*/)
 {
